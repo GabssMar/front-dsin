@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../images/logoDSINFundo.jfif" type="image/x-icon">
+    <title>Minha Conta</title>
+</head>
+
+<body>
+    <div class="d-flex h-100">
+        <div class="sidebar d-flex flex-column justify-content-between">
+            <div class="logo text-center my-3">
+                <img src="../images/logoDSIN.png" alt="" width="50">
+            </div>
+            <a href="cadastrarMulta.html" class="menu-item">
+                <span><br>Cadastrar<br>Multa</span>
+            </a>
+            <a href="cadastrarAviso.html" class="menu-item">
+                <span>Cadastrar<br>Aviso</span>
+            </a>
+            <a href="verificarMultas.html" class="menu-item">
+                <span>Verificar<br>Multas</span>
+            </a>
+            <a href="verificarAvisos.html" class="menu-item">
+                <span>Verificar<br>Avisos</span>
+            </a>
+            <a href="dashboard.html" class="menu-item">
+                <span>Dashboard</span>
+            </a>
+            <a class="menu-item active">
+                <span>Conta</span>
+            </a>
+        </div>
+
+        <div class="flex-grow-1 overflow-auto" style="height: 100vh;">
+            <div class="container d-flex justify-content-center align-items-center h-100">
+                <div class="account-box p-4 rounded">
+                    <div class="text-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="" width="300"
+                            class="mb-3">
+                        <h5 class="mb-1" id="nomeAgente">Nome do agente</h5>
+                        <p class="mb-4" id="codigoAgente">Código do agente</p>
+                    </div>
+                    <form>
+                        <div class="mb-3 position-relative">
+                            <label class="form-label">E-mail</label>
+                            <input id="email" type="email" class="form-control pe-5" disabled>
+
+                            <label class="form-label">Senha</label>
+                            <input id="senha" type="password" class="form-control pe-5" placeholder="********" disabled>
+
+                            <span class="position-absolute top-50 end-0 translate-middle-y me-2">
+                            </span>
+                        </div>
+                        <div class="text-end">
+                            <a type="button" href="../index.html" class="btn btn-danger px-4" onclick="logout()">Sair</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+            crossorigin="anonymous"></script>
+        <script src="../assetsLogin/scriptConta.js" type="module"></script>
+</body>
+
+</html>

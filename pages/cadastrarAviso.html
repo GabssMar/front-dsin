@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="shortcut icon" href="../images/logoDSINFundo.jfif" type="image/x-icon">
+    <title>Cadastro de Aviso</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex h-100">
+        <div class="sidebar d-flex flex-column justify-content-between">
+            <div class="logo text-center my-3">
+                <img src="../images/logoDSIN.png" alt="" width="50">
+            </div>
+            <a href="cadastrarMulta.html" class="menu-item">
+                <span><br>Cadastrar<br>Multa</span>
+            </a>
+            <a class="menu-item active">
+                <span>Cadastrar<br>Aviso</span>
+            </a>
+            <a href="verificarMultas.html" class="menu-item">
+                <span>Verificar<br>Multas</span>
+            </a>
+            <a href="verificarAvisos.html" class="menu-item">
+                <span>Verificar<br>Avisos</span>
+            </a>
+            <a href="dashboard.html" class="menu-item">
+                <span>Dashboard</span>
+            </a>
+            <a href="conta.html" class="menu-item">
+                <span>Conta</span>
+            </a>
+        </div>
+
+
+        <div class="flex-grow-1 overflow-auto" style="height: 100vh;">
+            <div class="container py-4">
+                <h3 class="mb-4">Cadastrar Aviso</h3>
+                <div class="mb-4">
+                    <h5>Dados do Veículo</h5>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label class="form-label">Placa*</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Modelo*</label>
+                            <input type="text" class="form-control">
+                        </div>
+                </div>
+
+                <div class="mb-4 mt-3">
+                    <h5>Dados do Condutor</h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="form-label">Nome*</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">CPF/CNH*</label>
+                            <input type="text" class="form-control">
+                        </div>
+                </div>
+
+                <div class="mb-4 mt-3">
+                    <h5>Detalhes do Aviso</h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label class="form-label">Tipo de Aviso*</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Responsável pela Emissão do Aviso*</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label">Local do Evento*</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-md-3">
+                            <label class="form-label">Data*</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Hora*</label>
+                            <input type="time" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label mt-3">Descrição do Motivo*</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <h5>Anexos e Observações</h5>
+                    <div class="mb-3">
+                        <label class="form-label">Foto ou Evidência</label>
+                        <input type="file" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Comentários adicionais</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary">Salvar Aviso</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

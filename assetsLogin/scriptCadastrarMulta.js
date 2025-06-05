@@ -50,7 +50,7 @@ document.getElementById('btnSalvar').addEventListener('click', async () => {
         formData.append('Evidencia', evidenciaFile);
 
         // Envia para a API
-        const response = await fetch('https://localhost:7095/multas', {
+        const response = await fetch('http://localhost:5163/multas', {
             method: 'POST',
             body: formData
         });

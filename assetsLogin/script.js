@@ -5,7 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     const senha = document.getElementById('senha').value;
 
     try {
-        const response = await fetch('https://localhost:7095/Usuarios/login', {
+        const response = await fetch('http://10.1.52.102:5163/Usuarios/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

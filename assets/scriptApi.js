@@ -5,7 +5,7 @@ const ctx4 = document.getElementById('grafico4');
 
 async function carregarMultas() {
     try {
-        const response = await fetch('https://localhost:7095/multas');
+        const response = await fetch('http://localhost:5163/multas');
         if (!response.ok) throw new Error('Erro ao carregar multas');
         return await response.json();
     } catch (error) {

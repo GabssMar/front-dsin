@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     try {
-        const response = await fetch(`https://localhost:7095/Usuarios/${userId}`);
+        const response = await fetch(`http://localhost:5163/Usuarios/${userId}`);
 
         if (!response.ok) {
             throw new Error("Usuário não encontrado");

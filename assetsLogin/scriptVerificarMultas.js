@@ -2,7 +2,7 @@ let todasMultas = []; // Variável global para armazenar as multas carregadas
 
 async function carregarMultas() {
   try {
-    const response = await fetch('https://localhost:7095/multas');
+    const response = await fetch('http://localhost:5163/multas');
     if (!response.ok) throw new Error('Erro ao carregar multas');
     const multas = await response.json();
 
@@ -37,6 +37,7 @@ function renderizarMultas(multas) {
         </div>
         <div>
           <button class="btn btn-sm btn-light toggle-details" style="font-size: 20px;">&#8226;&#8226;&#8226;</button>
+          <button class="btn btn-sm btn-success verificar-multa-btn" style="font-size: 14px; margin-top: 8px;">Verificar Multa</button>
         </div>
       </div>
 
@@ -62,10 +63,32 @@ function renderizarMultas(multas) {
     // Evento para expandir/contrair
     const toggleBtn = card.querySelector('.toggle-details');
     const detailsDiv = card.querySelector('.details');
+    const verificarBtn = card.querySelector('.verificar-multa-btn');
 
     toggleBtn.addEventListener('click', () => {
       const isVisible = detailsDiv.style.display === 'block';
       detailsDiv.style.display = isVisible ? 'none' : 'block';
+    });
+
+    // Evento para verificar multa
+    verificarBtn.addEventListener('click', async () => {
+      try {
+        const response = await fetch('http://localhost:4000/processar-multas', {
+          method: 'POST',
+        });
+        if (!response.ok) {
+          alert('Erro ao verificar a placa.');
+          return;
+        }
+        const data = await response.json();
+        if (data.placas && data.placas.length > 0) {
+          alert('Placas identificadas: ' + data.placas.join(', '));
+        } else {
+          alert(data.mensagem || 'Nenhuma placa identificada.');
+        }
+      } catch (error) {
+        alert('Erro ao verificar a placa.');
+      }
     });
 
     container.appendChild(card);

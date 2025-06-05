@@ -60,7 +60,32 @@ O DSIN é um sistema web para cadastro, visualização e gerenciamento de multas
 
 ## Instruções para o Backend
 
-> Adicione aqui as instruções para rodar o backend, caso necessário (ex: dependências, comandos, porta utilizada, etc).
+O sistema depende de uma API backend para autenticação, cadastro e consulta de multas e avisos.
+
+### Tecnologias sugeridas
+
+- **.NET 6+** (C#) — API RESTful
+- **Banco de Dados**: SQL Server ou outro compatível
+
+### Como executar o backend
+
+1. Clone o repositório do backend (caso esteja separado).
+2. Instale o SDK do .NET 6 ou superior.
+3. No diretório do backend, execute:
+   ```bash
+   dotnet restore
+   dotnet build
+   dotnet run
+   ```
+4. A API será iniciada, por padrão, em `http://localhost:5163`.
+
+### Endpoints utilizados no frontend
+
+- `POST http://localhost:5163/Usuarios/login` — Login de usuário
+- `GET/POST http://localhost:5163/multas` — Consulta e cadastro de multas
+- `GET http://localhost:5163/Usuarios/{id}` — Dados do usuário
+
+> Certifique-se de que a API esteja rodando antes de acessar o frontend.
 
 ## Autores
 
